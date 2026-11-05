@@ -27,3 +27,17 @@ assets/scenes/
 datasets/
 
 LIBERO/eval_result/
+
+# Local benchmark deployment artifacts (provenance documented separately)
+.venv-*/
+.tools/
+cache/
+models/
+runs/
+logs/
+vendor/
+benchmark_failure/scenes/
+benchmark_failure/annotations/
+benchmark_failure/index/
+benchmark_failure/.msc*/
+tools-install.log

@@ -1,0 +1,45 @@
+{
+  "reviewer": "root coordination agent, independent unified CLI invocation",
+  "observed_process_exit_code": 0,
+  "run_id": "20261105T100727Z_recovery",
+  "command": [
+    "/mnt/data/Hangxing/benchmarks/scripts/benchmarks",
+    "libero",
+    "recovery",
+    "--suite",
+    "libero_goal",
+    "--task",
+    "open_the_middle_drawer_of_the_cabinet",
+    "--level",
+    "L1",
+    "--scenes",
+    "1",
+    "--close-trials",
+    "1",
+    "--open-trials",
+    "1",
+    "--seed",
+    "11"
+  ],
+  "summary": "runs/20261105T100727Z_recovery/summary.json",
+  "episodes": [
+    {
+      "gripper_init": "close",
+      "steps": 81,
+      "native_goal_before": false,
+      "native_goal_after": true,
+      "environment_done": true
+    },
+    {
+      "gripper_init": "open",
+      "steps": 107,
+      "native_goal_before": false,
+      "native_goal_after": true,
+      "environment_done": true
+    }
+  ],
+  "owned_server_stopped": true,
+  "gpu_lock_released": true,
+  "scope": "Independent compact acceptance only; not full benchmark score",
+  "source_hashes": "deployment/adapter-hashes.json"
+}

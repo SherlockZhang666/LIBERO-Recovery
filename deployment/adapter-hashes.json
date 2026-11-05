@@ -1,0 +1,17 @@
+{
+  "scripts/bench": "a275f518f4e3a0baecb6488ee9966094b059b02d6b527213b4d2d4bb039f1b2a",
+  "scripts/doctor.py": "37bbc6a908fabcba54d7cae05ae7cd0b953588c27b5a233b004ad584af6ecb81",
+  "scripts/download_pi05.py": "f0a64ae3ec86a84fb8195de0655799e38eb218f99210136d775921655db06d9c",
+  "scripts/list_scenes.py": "315118afcb8d84f01040c2a1d6c608f83f4c369c6bbc26152937e19ed399a31a",
+  "scripts/monitor_policy.py": "fbcd9088af501384a399e77dd4a5190f1237b318845ec7af767662b6313dd800",
+  "scripts/rollout.py": "dec341ef308b701c44dc592df95d74cc085b3b3a5b7e209a49d84fb4f2f4ecbf",
+  "scripts/serve.py": "a42220a65dfa9bf406264cbe1b8adfd9243e956c7264654f0dfbd3f792a07c33",
+  "scripts/setup.sh": "2e9c834c46387afb9172c67eac186632aabfacab47739e45852af274693ce27e",
+  "scripts/status.py": "31a2e2227bb7b462de109d8982747f569538532aa64c988082b976cfdf47c23e",
+  "scripts/validate_scene.py": "6739e1965b298288cbb46b5519796a3e487be4aa5213759c438c372a5cfbd9ab",
+  "scripts/verify_checkpoint.py": "c94b98e9a9c5b05f4981545a71df3e07a7473c7e07ddbb393a9ba7a48b65aabb",
+  "scripts/verify_evidence.py": "ee568a5c82feecf256b0e955b702cd70024fe7e1ff9a15909028f1192e003ec2",
+  "deployment/sim-requirements.lock": "aea5c9fdc3a834a73ff0673a0e179ae4930997f1fabd8cadd31d7bbcb118a36a",
+  "deployment/pi05-libero-files.json": "85bcf373b2c78374e4660f6524ddca3f97187434cbe317b4aa68e99910c683c8",
+  "vendor/openpi/uv.lock": "793488b5a55bb87200db90a61fd0af51922b686d94e1da4f4c587ab119b37d74"
+}

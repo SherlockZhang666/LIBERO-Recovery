@@ -1,0 +1,870 @@
+{
+  "benchmark": "LIBERO-Recovery",
+  "updated_utc": "2026-11-05T10:13:11.521470+00:00",
+  "source_revision": "832d54dfc43f0c9e4240bb8d92f5fda7001bb093",
+  "policy_backend": {
+    "name": "official openpi pi05_libero",
+    "adapted_from_author_backend": true,
+    "author_checkpoint": "not supplied by official source",
+    "source_revision": "215abfb217dbac7d5f1273282331b9b1866c0479",
+    "checkpoint": "gs://openpi-assets/checkpoints/pi05_libero",
+    "object_versions": "deployment/pi05-libero-files.json",
+    "hashes": "models/pi05_libero/verified-hashes.json"
+  },
+  "scope": "Selected scenes and tasks only; not the full benchmark score",
+  "assets": {
+    "expected_scene_pairs": 4803,
+    "downloaded_scene_pairs": 4803,
+    "downloaded_annotations": 4803,
+    "checkpoint_hash_verified": true,
+    "complete": true
+  },
+  "gates": {
+    "environment": {
+      "status": "passed",
+      "evidence": [
+        "logs/doctor.json"
+      ]
+    },
+    "assets": {
+      "status": "passed",
+      "evidence": [
+        "benchmark_failure/index/selection.jsonl",
+        "models/pi05_libero/verified-hashes.json"
+      ]
+    },
+    "scene_loading": {
+      "status": "passed",
+      "evidence": [
+        "logs/scene-validation.json"
+      ]
+    },
+    "physics": {
+      "status": "passed",
+      "evidence": [
+        "logs/doctor.json",
+        "logs/doctor.png"
+      ]
+    },
+    "robot_control": {
+      "status": "passed",
+      "evidence": [
+        "runs/20261105T095735Z_acceptance_policy/episode_000_000_native/result.json",
+        "runs/20261105T095735Z_acceptance_recovery/episode_000_000_close/result.json",
+        "runs/20261105T095735Z_acceptance_recovery/episode_000_001_open/result.json",
+        "runs/20261105T095735Z_acceptance_recovery/episode_001_000_close/result.json",
+        "runs/20261105T095735Z_acceptance_recovery/episode_001_001_open/result.json",
+        "runs/20261105T100727Z_recovery/episode_000_000_close/result.json",
+        "runs/20261105T100727Z_recovery/episode_000_001_open/result.json"
+      ]
+    },
+    "policy_inference": {
+      "status": "passed",
+      "evidence": [
+        "runs/20261105T095735Z_acceptance_policy/episode_000_000_native/result.json",
+        "runs/20261105T095735Z_acceptance_recovery/episode_000_000_close/result.json",
+        "runs/20261105T095735Z_acceptance_recovery/episode_000_001_open/result.json",
+        "runs/20261105T095735Z_acceptance_recovery/episode_001_000_close/result.json",
+        "runs/20261105T095735Z_acceptance_recovery/episode_001_001_open/result.json",
+        "runs/20261105T100727Z_recovery/episode_000_000_close/result.json",
+        "runs/20261105T100727Z_recovery/episode_000_001_open/result.json"
+      ]
+    },
+    "policy_rollout": {
+      "status": "passed",
+      "evidence": [
+        "runs/20261105T095735Z_acceptance_policy/episode_000_000_native/result.json",
+        "runs/20261105T095735Z_acceptance_recovery/episode_000_000_close/result.json",
+        "runs/20261105T095735Z_acceptance_recovery/episode_000_001_open/result.json",
+        "runs/20261105T095735Z_acceptance_recovery/episode_001_000_close/result.json",
+        "runs/20261105T095735Z_acceptance_recovery/episode_001_001_open/result.json",
+        "runs/20261105T100727Z_recovery/episode_000_000_close/result.json",
+        "runs/20261105T100727Z_recovery/episode_000_001_open/result.json"
+      ]
+    },
+    "task_success": {
+      "status": "passed",
+      "evidence": [
+        "runs/20261105T095735Z_acceptance_policy/episode_000_000_native/result.json",
+        "runs/20261105T095735Z_acceptance_recovery/episode_000_000_close/result.json",
+        "runs/20261105T095735Z_acceptance_recovery/episode_000_001_open/result.json",
+        "runs/20261105T095735Z_acceptance_recovery/episode_001_000_close/result.json",
+        "runs/20261105T095735Z_acceptance_recovery/episode_001_001_open/result.json",
+        "runs/20261105T100727Z_recovery/episode_000_000_close/result.json",
+        "runs/20261105T100727Z_recovery/episode_000_001_open/result.json"
+      ]
+    },
+    "recovery_replay": {
+      "status": "passed",
+      "evidence": [
+        "logs/scene-validation.json"
+      ]
+    },
+    "recovery_execution": {
+      "status": "passed",
+      "evidence": [
+        "runs/20261105T095735Z_acceptance_recovery/episode_000_000_close/result.json",
+        "runs/20261105T095735Z_acceptance_recovery/episode_000_001_open/result.json",
+        "runs/20261105T095735Z_acceptance_recovery/episode_001_000_close/result.json",
+        "runs/20261105T095735Z_acceptance_recovery/episode_001_001_open/result.json",
+        "runs/20261105T100727Z_recovery/episode_000_000_close/result.json",
+        "runs/20261105T100727Z_recovery/episode_000_001_open/result.json"
+      ]
+    },
+    "recovery_success": {
+      "status": "passed",
+      "evidence": [
+        "runs/20261105T095735Z_acceptance_recovery/episode_000_000_close/result.json",
+        "runs/20261105T095735Z_acceptance_recovery/episode_000_001_open/result.json",
+        "runs/20261105T095735Z_acceptance_recovery/episode_001_000_close/result.json",
+        "runs/20261105T095735Z_acceptance_recovery/episode_001_001_open/result.json",
+        "runs/20261105T100727Z_recovery/episode_000_000_close/result.json",
+        "runs/20261105T100727Z_recovery/episode_000_001_open/result.json"
+      ]
+    },
+    "cli_end_to_end": {
+      "status": "passed",
+      "observed_process_exit_code": 0,
+      "evidence": [
+        "deployment/independent-review.json",
+        "runs/20261105T100727Z_recovery/summary.json"
+      ]
+    }
+  },
+  "episodes": [
+    {
+      "mode": "policy",
+      "scene": "LIBERO/libero/libero/bddl_files/libero_goal/open_the_middle_drawer_of_the_cabinet.bddl",
+      "scene_sha256": "832ab48ec476807c767e8985666e295700f92d1f8daeae1c34eee1e75293769b",
+      "prompt": "Open the middle layer of the drawer",
+      "seed": 7,
+      "trial": 0,
+      "gripper_init": "native",
+      "policy": "official openpi pi05_libero",
+      "policy_rng_seed": 0,
+      "recovery_type": null,
+      "success": false,
+      "completed": false,
+      "exception": "Traceback (most recent call last):\n  File \"/mnt/data/Hangxing/benchmarks/LIBERO-Recovery/scripts/rollout.py\", line 111, in run\n    result['input_shapes']={k:list(np.shape(v)) for k,v in inp.items()}\n  File \"/mnt/data/Hangxing/benchmarks/LIBERO-Recovery/vendor/openpi/packages/openpi-client/src/openpi_client/websocket_client_policy.py\", line 50, in infer\n    response = self._ws.recv()\n  File \"/mnt/data/Hangxing/benchmarks/LIBERO-Recovery/.venv-sim/lib/python3.10/site-packages/websockets/sync/connection.py\", line 336, in recv\n    raise self.protocol.close_exc from self.recv_exc\nwebsockets.exceptions.ConnectionClosedError: sent 1011 (internal error) keepalive ping timeout; no close frame received\n",
+      "initial_native_success": false,
+      "input_shapes": {
+        "observation/image": [
+          224,
+          224,
+          3
+        ],
+        "observation/wrist_image": [
+          224,
+          224,
+          3
+        ],
+        "observation/state": [
+          8
+        ],
+        "prompt": []
+      },
+      "policy_queries": 0,
+      "steps": 0,
+      "evidence": "runs/20261105T094843Z_acceptance_policy/episode_000_000_native/result.json"
+    },
+    {
+      "mode": "policy",
+      "scene": "LIBERO/libero/libero/bddl_files/libero_goal/open_the_middle_drawer_of_the_cabinet.bddl",
+      "scene_sha256": "832ab48ec476807c767e8985666e295700f92d1f8daeae1c34eee1e75293769b",
+      "prompt": "open the middle drawer of the cabinet",
+      "bddl_language": "Open the middle layer of the drawer",
+      "seed": 7,
+      "trial": 0,
+      "gripper_init": "native",
+      "policy": "official openpi pi05_libero",
+      "policy_rng_seed": 0,
+      "recovery_type": null,
+      "success": true,
+      "completed": true,
+      "exception": null,
+      "initial_native_success": false,
+      "input_shapes": {
+        "observation/image": [
+          224,
+          224,
+          3
+        ],
+        "observation/wrist_image": [
+          224,
+          224,
+          3
+        ],
+        "observation/state": [
+          8
+        ],
+        "prompt": []
+      },
+      "first_contact_step": 29,
+      "first_gripper_change_step": null,
+      "steps": 138,
+      "wall_seconds": 42.29151110099974,
+      "native_predicate": true,
+      "policy_queries": 28,
+      "recovery_success": null,
+      "evidence": "runs/20261105T095735Z_acceptance_policy/episode_000_000_native/result.json"
+    },
+    {
+      "mode": "recovery",
+      "scene": "benchmark_failure/scenes/libero_goal/open_the_middle_drawer_of_the_cabinet/episode_019/step_0080.bddl",
+      "scene_sha256": "0f5266705bbdb4d221087ddcd6f2605dac9b7ff9d9f8883a4d2fb5596b716c92",
+      "prompt": "open the middle layer of the drawer",
+      "bddl_language": "open the middle layer of the drawer",
+      "seed": 7,
+      "trial": 0,
+      "gripper_init": "close",
+      "policy": "official openpi pi05_libero",
+      "policy_rng_seed": 0,
+      "recovery_type": "learned_policy_continuation",
+      "success": true,
+      "completed": true,
+      "exception": null,
+      "native_success_at_failure_restore": false,
+      "source_scene_id": "libero_goal__open_the_middle_drawer_of_the_cabinet__episode_019__step0080",
+      "annotation": {
+        "scene_id": "libero_goal__open_the_middle_drawer_of_the_cabinet__episode_019__step0080",
+        "source": "libero_goal",
+        "model": "Qwen3-VL-PI-LIBERO-4in1",
+        "task": "open the middle drawer of the cabinet",
+        "episode_index": 19,
+        "episode_idx_in_task": 19,
+        "run_id": null,
+        "npz_path": "LIBERO/eval_result/actionhead/Qwen3-VL-PI-LIBERO-4in1/libero_goal/libero_goal/raw/episode_000019.npz",
+        "scene_dir": "benchmark_failure/scenes/libero_goal/open_the_middle_drawer_of_the_cabinet/episode_019",
+        "episode_length": 300,
+        "first_contact_step": 60,
+        "first_gripper_change_step": null,
+        "step": 80,
+        "timestamp_sec": 4.0,
+        "bddl_file": "benchmark_failure/scenes/libero_goal/open_the_middle_drawer_of_the_cabinet/episode_019/step_0080.bddl",
+        "original_scene_dir": "benchmark_failure/scenes/libero_goal/open_the_middle_drawer_of_the_cabinet/episode_019",
+        "sim_state_file": "benchmark_failure/scenes/libero_goal/open_the_middle_drawer_of_the_cabinet/episode_019/step_0080_sim_state.npy",
+        "stage": "post-fail",
+        "fail_steps": [
+          16
+        ],
+        "level": "L1",
+        "level_reason": "\u673a\u68b0\u81c2\u672a\u6b63\u786e\u6293\u53d6\u62bd\u5c49\u628a\u624b\uff0c\u4f46\u7269\u4f53\u4f4d\u7f6e\u548c\u59ff\u6001\u672a\u53d1\u751f\u5b9e\u8d28\u6539\u53d8\uff0c\u53ef\u91cd\u65b0\u6267\u884c\u6293\u53d6\u52a8\u4f5c\u3002",
+        "level_confidence": 0.9,
+        "frame_index_in_npz": 80,
+        "vlm_model": "/H20_vepfs/liulin/Qwen3VL-27B"
+      },
+      "state_sha256": "9969d9026047236a74f83df8dd7869a7dced22a289a24f15832fa86916bc9e6b",
+      "initialization": "recorded failure state copied; free-joint xy perturbation applied before rollout; controller goal reanchored",
+      "obj_deltas": {
+        "akita_black_bowl_1": {
+          "dx": -0.016947668425041713,
+          "dy": 0.011196751689604587,
+          "qpos_address": 9,
+          "flattened_address": 10
+        },
+        "cream_cheese_1": {
+          "dx": -0.0024636307423642617,
+          "dy": 0.00893860711323765,
+          "qpos_address": 16,
+          "flattened_address": 17
+        },
+        "wine_bottle_1": {
+          "dx": 0.019119580479864107,
+          "dy": 0.0015398348164173473,
+          "qpos_address": 23,
+          "flattened_address": 24
+        },
+        "plate_1": {
+          "dx": 4.481854639751606e-05,
+          "dy": -0.017117954665609537,
+          "qpos_address": 30,
+          "flattened_address": 31
+        }
+      },
+      "flat_qpos_offset": 1,
+      "initial_native_success": false,
+      "input_shapes": {
+        "observation/image": [
+          224,
+          224,
+          3
+        ],
+        "observation/wrist_image": [
+          224,
+          224,
+          3
+        ],
+        "observation/state": [
+          8
+        ],
+        "prompt": []
+      },
+      "first_contact_step": 37,
+      "first_gripper_change_step": 1,
+      "steps": 86,
+      "wall_seconds": 5.737550793000082,
+      "native_predicate": true,
+      "policy_queries": 18,
+      "recovery_success": true,
+      "evidence": "runs/20261105T095735Z_acceptance_recovery/episode_000_000_close/result.json"
+    },
+    {
+      "mode": "recovery",
+      "scene": "benchmark_failure/scenes/libero_goal/open_the_middle_drawer_of_the_cabinet/episode_019/step_0080.bddl",
+      "scene_sha256": "0f5266705bbdb4d221087ddcd6f2605dac9b7ff9d9f8883a4d2fb5596b716c92",
+      "prompt": "open the middle layer of the drawer",
+      "bddl_language": "open the middle layer of the drawer",
+      "seed": 7,
+      "trial": 1,
+      "gripper_init": "open",
+      "policy": "official openpi pi05_libero",
+      "policy_rng_seed": 0,
+      "recovery_type": "learned_policy_continuation",
+      "success": true,
+      "completed": true,
+      "exception": null,
+      "native_success_at_failure_restore": false,
+      "source_scene_id": "libero_goal__open_the_middle_drawer_of_the_cabinet__episode_019__step0080",
+      "annotation": {
+        "scene_id": "libero_goal__open_the_middle_drawer_of_the_cabinet__episode_019__step0080",
+        "source": "libero_goal",
+        "model": "Qwen3-VL-PI-LIBERO-4in1",
+        "task": "open the middle drawer of the cabinet",
+        "episode_index": 19,
+        "episode_idx_in_task": 19,
+        "run_id": null,
+        "npz_path": "LIBERO/eval_result/actionhead/Qwen3-VL-PI-LIBERO-4in1/libero_goal/libero_goal/raw/episode_000019.npz",
+        "scene_dir": "benchmark_failure/scenes/libero_goal/open_the_middle_drawer_of_the_cabinet/episode_019",
+        "episode_length": 300,
+        "first_contact_step": 60,
+        "first_gripper_change_step": null,
+        "step": 80,
+        "timestamp_sec": 4.0,
+        "bddl_file": "benchmark_failure/scenes/libero_goal/open_the_middle_drawer_of_the_cabinet/episode_019/step_0080.bddl",
+        "original_scene_dir": "benchmark_failure/scenes/libero_goal/open_the_middle_drawer_of_the_cabinet/episode_019",
+        "sim_state_file": "benchmark_failure/scenes/libero_goal/open_the_middle_drawer_of_the_cabinet/episode_019/step_0080_sim_state.npy",
+        "stage": "post-fail",
+        "fail_steps": [
+          16
+        ],
+        "level": "L1",
+        "level_reason": "\u673a\u68b0\u81c2\u672a\u6b63\u786e\u6293\u53d6\u62bd\u5c49\u628a\u624b\uff0c\u4f46\u7269\u4f53\u4f4d\u7f6e\u548c\u59ff\u6001\u672a\u53d1\u751f\u5b9e\u8d28\u6539\u53d8\uff0c\u53ef\u91cd\u65b0\u6267\u884c\u6293\u53d6\u52a8\u4f5c\u3002",
+        "level_confidence": 0.9,
+        "frame_index_in_npz": 80,
+        "vlm_model": "/H20_vepfs/liulin/Qwen3VL-27B"
+      },
+      "state_sha256": "9969d9026047236a74f83df8dd7869a7dced22a289a24f15832fa86916bc9e6b",
+      "initialization": "recorded failure state copied; free-joint xy perturbation applied before rollout; controller goal reanchored",
+      "obj_deltas": {
+        "akita_black_bowl_1": {
+          "dx": -0.009262440795925154,
+          "dy": -4.6999669776025266e-06,
+          "qpos_address": 9,
+          "flattened_address": 10
+        },
+        "cream_cheese_1": {
+          "dx": 0.007169199844837621,
+          "dy": 0.012149561444175016,
+          "qpos_address": 16,
+          "flattened_address": 17
+        },
+        "wine_bottle_1": {
+          "dx": -0.004762354674058465,
+          "dy": -0.017362546123763797,
+          "qpos_address": 23,
+          "flattened_address": 24
+        },
+        "plate_1": {
+          "dx": -0.008474176027680259,
+          "dy": 0.016383741108784548,
+          "qpos_address": 30,
+          "flattened_address": 31
+        }
+      },
+      "flat_qpos_offset": 1,
+      "initial_native_success": false,
+      "input_shapes": {
+        "observation/image": [
+          224,
+          224,
+          3
+        ],
+        "observation/wrist_image": [
+          224,
+          224,
+          3
+        ],
+        "observation/state": [
+          8
+        ],
+        "prompt": []
+      },
+      "first_contact_step": 32,
+      "first_gripper_change_step": null,
+      "steps": 75,
+      "wall_seconds": 4.790852602000086,
+      "native_predicate": true,
+      "policy_queries": 15,
+      "recovery_success": true,
+      "evidence": "runs/20261105T095735Z_acceptance_recovery/episode_000_001_open/result.json"
+    },
+    {
+      "mode": "recovery",
+      "scene": "benchmark_failure/scenes/libero_goal/open_the_middle_drawer_of_the_cabinet/episode_020/step_0080.bddl",
+      "scene_sha256": "d866bad61ed6f4084de3ee43a2ae34d04b35ab9d54034028b7d56c3daa646843",
+      "prompt": "open the middle layer of the drawer",
+      "bddl_language": "open the middle layer of the drawer",
+      "seed": 7,
+      "trial": 0,
+      "gripper_init": "close",
+      "policy": "official openpi pi05_libero",
+      "policy_rng_seed": 0,
+      "recovery_type": "learned_policy_continuation",
+      "success": true,
+      "completed": true,
+      "exception": null,
+      "native_success_at_failure_restore": false,
+      "source_scene_id": "libero_goal__open_the_middle_drawer_of_the_cabinet__episode_020__step0080",
+      "annotation": {
+        "scene_id": "libero_goal__open_the_middle_drawer_of_the_cabinet__episode_020__step0080",
+        "source": "libero_goal",
+        "model": "Qwen3-VL-PI-LIBERO-4in1",
+        "task": "open the middle drawer of the cabinet",
+        "episode_index": 20,
+        "episode_idx_in_task": 20,
+        "run_id": null,
+        "npz_path": "LIBERO/eval_result/actionhead/Qwen3-VL-PI-LIBERO-4in1/libero_goal/libero_goal/raw/episode_000020.npz",
+        "scene_dir": "benchmark_failure/scenes/libero_goal/open_the_middle_drawer_of_the_cabinet/episode_020",
+        "episode_length": 300,
+        "first_contact_step": 60,
+        "first_gripper_change_step": null,
+        "step": 80,
+        "timestamp_sec": 4.0,
+        "bddl_file": "benchmark_failure/scenes/libero_goal/open_the_middle_drawer_of_the_cabinet/episode_020/step_0080.bddl",
+        "original_scene_dir": "benchmark_failure/scenes/libero_goal/open_the_middle_drawer_of_the_cabinet/episode_020",
+        "sim_state_file": "benchmark_failure/scenes/libero_goal/open_the_middle_drawer_of_the_cabinet/episode_020/step_0080_sim_state.npy",
+        "stage": "post-fail",
+        "fail_steps": [
+          8
+        ],
+        "level": "L1",
+        "level_reason": "\u673a\u68b0\u81c2\u672a\u4e0e\u62bd\u5c49\u4ea4\u4e92\uff0c\u4efb\u52a1\u6784\u578b\u672a\u53d8\uff0c\u53ef\u91cd\u8bd5\u539f\u52a8\u4f5c",
+        "level_confidence": 0.9,
+        "frame_index_in_npz": 80,
+        "vlm_model": "/H20_vepfs/liulin/Qwen3VL-27B"
+      },
+      "state_sha256": "36378e5be52500b5410b1a18c2801ef2299382553f2c4d6494a5af3a82e25504",
+      "initialization": "recorded failure state copied; free-joint xy perturbation applied before rollout; controller goal reanchored",
+      "obj_deltas": {
+        "akita_black_bowl_1": {
+          "dx": -0.01146458585680338,
+          "dy": -0.001915041527292674,
+          "qpos_address": 9,
+          "flattened_address": 10
+        },
+        "cream_cheese_1": {
+          "dx": 0.017248240787560872,
+          "dy": -0.01900403089798608,
+          "qpos_address": 16,
+          "flattened_address": 17
+        },
+        "wine_bottle_1": {
+          "dx": 0.0040219566985649005,
+          "dy": 0.018005180016545826,
+          "qpos_address": 23,
+          "flattened_address": 24
+        },
+        "plate_1": {
+          "dx": -0.010787884839161408,
+          "dy": 0.0019395967694412174,
+          "qpos_address": 30,
+          "flattened_address": 31
+        }
+      },
+      "flat_qpos_offset": 1,
+      "initial_native_success": false,
+      "input_shapes": {
+        "observation/image": [
+          224,
+          224,
+          3
+        ],
+        "observation/wrist_image": [
+          224,
+          224,
+          3
+        ],
+        "observation/state": [
+          8
+        ],
+        "prompt": []
+      },
+      "first_contact_step": 29,
+      "first_gripper_change_step": 1,
+      "steps": 82,
+      "wall_seconds": 5.390994444000171,
+      "native_predicate": true,
+      "policy_queries": 17,
+      "recovery_success": true,
+      "evidence": "runs/20261105T095735Z_acceptance_recovery/episode_001_000_close/result.json"
+    },
+    {
+      "mode": "recovery",
+      "scene": "benchmark_failure/scenes/libero_goal/open_the_middle_drawer_of_the_cabinet/episode_020/step_0080.bddl",
+      "scene_sha256": "d866bad61ed6f4084de3ee43a2ae34d04b35ab9d54034028b7d56c3daa646843",
+      "prompt": "open the middle layer of the drawer",
+      "bddl_language": "open the middle layer of the drawer",
+      "seed": 7,
+      "trial": 1,
+      "gripper_init": "open",
+      "policy": "official openpi pi05_libero",
+      "policy_rng_seed": 0,
+      "recovery_type": "learned_policy_continuation",
+      "success": true,
+      "completed": true,
+      "exception": null,
+      "native_success_at_failure_restore": false,
+      "source_scene_id": "libero_goal__open_the_middle_drawer_of_the_cabinet__episode_020__step0080",
+      "annotation": {
+        "scene_id": "libero_goal__open_the_middle_drawer_of_the_cabinet__episode_020__step0080",
+        "source": "libero_goal",
+        "model": "Qwen3-VL-PI-LIBERO-4in1",
+        "task": "open the middle drawer of the cabinet",
+        "episode_index": 20,
+        "episode_idx_in_task": 20,
+        "run_id": null,
+        "npz_path": "LIBERO/eval_result/actionhead/Qwen3-VL-PI-LIBERO-4in1/libero_goal/libero_goal/raw/episode_000020.npz",
+        "scene_dir": "benchmark_failure/scenes/libero_goal/open_the_middle_drawer_of_the_cabinet/episode_020",
+        "episode_length": 300,
+        "first_contact_step": 60,
+        "first_gripper_change_step": null,
+        "step": 80,
+        "timestamp_sec": 4.0,
+        "bddl_file": "benchmark_failure/scenes/libero_goal/open_the_middle_drawer_of_the_cabinet/episode_020/step_0080.bddl",
+        "original_scene_dir": "benchmark_failure/scenes/libero_goal/open_the_middle_drawer_of_the_cabinet/episode_020",
+        "sim_state_file": "benchmark_failure/scenes/libero_goal/open_the_middle_drawer_of_the_cabinet/episode_020/step_0080_sim_state.npy",
+        "stage": "post-fail",
+        "fail_steps": [
+          8
+        ],
+        "level": "L1",
+        "level_reason": "\u673a\u68b0\u81c2\u672a\u4e0e\u62bd\u5c49\u4ea4\u4e92\uff0c\u4efb\u52a1\u6784\u578b\u672a\u53d8\uff0c\u53ef\u91cd\u8bd5\u539f\u52a8\u4f5c",
+        "level_confidence": 0.9,
+        "frame_index_in_npz": 80,
+        "vlm_model": "/H20_vepfs/liulin/Qwen3VL-27B"
+      },
+      "state_sha256": "36378e5be52500b5410b1a18c2801ef2299382553f2c4d6494a5af3a82e25504",
+      "initialization": "recorded failure state copied; free-joint xy perturbation applied before rollout; controller goal reanchored",
+      "obj_deltas": {
+        "akita_black_bowl_1": {
+          "dx": 0.01636513499546925,
+          "dy": -0.014673222169629994,
+          "qpos_address": 9,
+          "flattened_address": 10
+        },
+        "cream_cheese_1": {
+          "dx": 0.0009365032269506336,
+          "dy": 0.010016394364081395,
+          "qpos_address": 16,
+          "flattened_address": 17
+        },
+        "wine_bottle_1": {
+          "dx": 0.00676052963535655,
+          "dy": -0.0012898856102007729,
+          "qpos_address": 23,
+          "flattened_address": 24
+        },
+        "plate_1": {
+          "dx": -0.011806036388088198,
+          "dy": -0.0003693644363571835,
+          "qpos_address": 30,
+          "flattened_address": 31
+        }
+      },
+      "flat_qpos_offset": 1,
+      "initial_native_success": false,
+      "input_shapes": {
+        "observation/image": [
+          224,
+          224,
+          3
+        ],
+        "observation/wrist_image": [
+          224,
+          224,
+          3
+        ],
+        "observation/state": [
+          8
+        ],
+        "prompt": []
+      },
+      "first_contact_step": 31,
+      "first_gripper_change_step": null,
+      "steps": 76,
+      "wall_seconds": 5.078551528999924,
+      "native_predicate": true,
+      "policy_queries": 16,
+      "recovery_success": true,
+      "evidence": "runs/20261105T095735Z_acceptance_recovery/episode_001_001_open/result.json"
+    },
+    {
+      "mode": "recovery",
+      "scene": "benchmark_failure/scenes/libero_goal/open_the_middle_drawer_of_the_cabinet/episode_019/step_0080.bddl",
+      "scene_sha256": "0f5266705bbdb4d221087ddcd6f2605dac9b7ff9d9f8883a4d2fb5596b716c92",
+      "prompt": "open the middle layer of the drawer",
+      "bddl_language": "open the middle layer of the drawer",
+      "seed": 11,
+      "trial": 0,
+      "gripper_init": "close",
+      "policy": "official openpi pi05_libero",
+      "policy_rng_seed": 0,
+      "recovery_type": "learned_policy_continuation",
+      "success": true,
+      "completed": true,
+      "exception": null,
+      "native_success_at_failure_restore": false,
+      "source_scene_id": "libero_goal__open_the_middle_drawer_of_the_cabinet__episode_019__step0080",
+      "annotation": {
+        "scene_id": "libero_goal__open_the_middle_drawer_of_the_cabinet__episode_019__step0080",
+        "source": "libero_goal",
+        "model": "Qwen3-VL-PI-LIBERO-4in1",
+        "task": "open the middle drawer of the cabinet",
+        "episode_index": 19,
+        "episode_idx_in_task": 19,
+        "run_id": null,
+        "npz_path": "LIBERO/eval_result/actionhead/Qwen3-VL-PI-LIBERO-4in1/libero_goal/libero_goal/raw/episode_000019.npz",
+        "scene_dir": "benchmark_failure/scenes/libero_goal/open_the_middle_drawer_of_the_cabinet/episode_019",
+        "episode_length": 300,
+        "first_contact_step": 60,
+        "first_gripper_change_step": null,
+        "step": 80,
+        "timestamp_sec": 4.0,
+        "bddl_file": "benchmark_failure/scenes/libero_goal/open_the_middle_drawer_of_the_cabinet/episode_019/step_0080.bddl",
+        "original_scene_dir": "benchmark_failure/scenes/libero_goal/open_the_middle_drawer_of_the_cabinet/episode_019",
+        "sim_state_file": "benchmark_failure/scenes/libero_goal/open_the_middle_drawer_of_the_cabinet/episode_019/step_0080_sim_state.npy",
+        "stage": "post-fail",
+        "fail_steps": [
+          16
+        ],
+        "level": "L1",
+        "level_reason": "\u673a\u68b0\u81c2\u672a\u6b63\u786e\u6293\u53d6\u62bd\u5c49\u628a\u624b\uff0c\u4f46\u7269\u4f53\u4f4d\u7f6e\u548c\u59ff\u6001\u672a\u53d1\u751f\u5b9e\u8d28\u6539\u53d8\uff0c\u53ef\u91cd\u65b0\u6267\u884c\u6293\u53d6\u52a8\u4f5c\u3002",
+        "level_confidence": 0.9,
+        "frame_index_in_npz": 80,
+        "vlm_model": "/H20_vepfs/liulin/Qwen3VL-27B"
+      },
+      "state_sha256": "9969d9026047236a74f83df8dd7869a7dced22a289a24f15832fa86916bc9e6b",
+      "initialization": "recorded failure state copied; free-joint xy perturbation applied before rollout; controller goal reanchored",
+      "obj_deltas": {
+        "akita_black_bowl_1": {
+          "dx": -0.012789212444929234,
+          "dy": -0.019220990340495018,
+          "qpos_address": 9,
+          "flattened_address": 10
+        },
+        "cream_cheese_1": {
+          "dx": -0.0014712589400662154,
+          "dy": 0.008997357167685915,
+          "qpos_address": 16,
+          "flattened_address": 17
+        },
+        "wine_bottle_1": {
+          "dx": -0.003191855816490903,
+          "dy": -0.0005829160732887043,
+          "qpos_address": 23,
+          "flattened_address": 24
+        },
+        "plate_1": {
+          "dx": -0.019488767416375653,
+          "dy": -0.000505135707205135,
+          "qpos_address": 30,
+          "flattened_address": 31
+        }
+      },
+      "flat_qpos_offset": 1,
+      "initial_native_success": false,
+      "input_shapes": {
+        "observation/image": [
+          224,
+          224,
+          3
+        ],
+        "observation/wrist_image": [
+          224,
+          224,
+          3
+        ],
+        "observation/state": [
+          8
+        ],
+        "prompt": []
+      },
+      "first_contact_step": 38,
+      "first_gripper_change_step": null,
+      "steps": 81,
+      "wall_seconds": 12.703110353000739,
+      "native_predicate": true,
+      "policy_queries": 17,
+      "environment_done": true,
+      "recovery_success": true,
+      "evidence": "runs/20261105T100727Z_recovery/episode_000_000_close/result.json"
+    },
+    {
+      "mode": "recovery",
+      "scene": "benchmark_failure/scenes/libero_goal/open_the_middle_drawer_of_the_cabinet/episode_019/step_0080.bddl",
+      "scene_sha256": "0f5266705bbdb4d221087ddcd6f2605dac9b7ff9d9f8883a4d2fb5596b716c92",
+      "prompt": "open the middle layer of the drawer",
+      "bddl_language": "open the middle layer of the drawer",
+      "seed": 11,
+      "trial": 1,
+      "gripper_init": "open",
+      "policy": "official openpi pi05_libero",
+      "policy_rng_seed": 0,
+      "recovery_type": "learned_policy_continuation",
+      "success": true,
+      "completed": true,
+      "exception": null,
+      "native_success_at_failure_restore": false,
+      "source_scene_id": "libero_goal__open_the_middle_drawer_of_the_cabinet__episode_019__step0080",
+      "annotation": {
+        "scene_id": "libero_goal__open_the_middle_drawer_of_the_cabinet__episode_019__step0080",
+        "source": "libero_goal",
+        "model": "Qwen3-VL-PI-LIBERO-4in1",
+        "task": "open the middle drawer of the cabinet",
+        "episode_index": 19,
+        "episode_idx_in_task": 19,
+        "run_id": null,
+        "npz_path": "LIBERO/eval_result/actionhead/Qwen3-VL-PI-LIBERO-4in1/libero_goal/libero_goal/raw/episode_000019.npz",
+        "scene_dir": "benchmark_failure/scenes/libero_goal/open_the_middle_drawer_of_the_cabinet/episode_019",
+        "episode_length": 300,
+        "first_contact_step": 60,
+        "first_gripper_change_step": null,
+        "step": 80,
+        "timestamp_sec": 4.0,
+        "bddl_file": "benchmark_failure/scenes/libero_goal/open_the_middle_drawer_of_the_cabinet/episode_019/step_0080.bddl",
+        "original_scene_dir": "benchmark_failure/scenes/libero_goal/open_the_middle_drawer_of_the_cabinet/episode_019",
+        "sim_state_file": "benchmark_failure/scenes/libero_goal/open_the_middle_drawer_of_the_cabinet/episode_019/step_0080_sim_state.npy",
+        "stage": "post-fail",
+        "fail_steps": [
+          16
+        ],
+        "level": "L1",
+        "level_reason": "\u673a\u68b0\u81c2\u672a\u6b63\u786e\u6293\u53d6\u62bd\u5c49\u628a\u624b\uff0c\u4f46\u7269\u4f53\u4f4d\u7f6e\u548c\u59ff\u6001\u672a\u53d1\u751f\u5b9e\u8d28\u6539\u53d8\uff0c\u53ef\u91cd\u65b0\u6267\u884c\u6293\u53d6\u52a8\u4f5c\u3002",
+        "level_confidence": 0.9,
+        "frame_index_in_npz": 80,
+        "vlm_model": "/H20_vepfs/liulin/Qwen3VL-27B"
+      },
+      "state_sha256": "9969d9026047236a74f83df8dd7869a7dced22a289a24f15832fa86916bc9e6b",
+      "initialization": "recorded failure state copied; free-joint xy perturbation applied before rollout; controller goal reanchored",
+      "obj_deltas": {
+        "akita_black_bowl_1": {
+          "dx": 0.017672266093734647,
+          "dy": 0.01403180357507115,
+          "qpos_address": 9,
+          "flattened_address": 10
+        },
+        "cream_cheese_1": {
+          "dx": 0.009198578808832743,
+          "dy": -0.015650557125241004,
+          "qpos_address": 16,
+          "flattened_address": 17
+        },
+        "wine_bottle_1": {
+          "dx": 0.01575616681140325,
+          "dy": 0.014286169882913185,
+          "qpos_address": 23,
+          "flattened_address": 24
+        },
+        "plate_1": {
+          "dx": -0.013396535296190915,
+          "dy": 0.005293360552939844,
+          "qpos_address": 30,
+          "flattened_address": 31
+        }
+      },
+      "flat_qpos_offset": 1,
+      "initial_native_success": false,
+      "input_shapes": {
+        "observation/image": [
+          224,
+          224,
+          3
+        ],
+        "observation/wrist_image": [
+          224,
+          224,
+          3
+        ],
+        "observation/state": [
+          8
+        ],
+        "prompt": []
+      },
+      "first_contact_step": 26,
+      "first_gripper_change_step": null,
+      "steps": 107,
+      "wall_seconds": 7.006120749001639,
+      "native_predicate": true,
+      "policy_queries": 22,
+      "environment_done": true,
+      "recovery_success": true,
+      "evidence": "runs/20261105T100727Z_recovery/episode_000_001_open/result.json"
+    }
+  ],
+  "independent_review": {
+    "reviewer": "root coordination agent, independent unified CLI invocation",
+    "observed_process_exit_code": 0,
+    "run_id": "20261105T100727Z_recovery",
+    "command": [
+      "/mnt/data/Hangxing/benchmarks/scripts/benchmarks",
+      "libero",
+      "recovery",
+      "--suite",
+      "libero_goal",
+      "--task",
+      "open_the_middle_drawer_of_the_cabinet",
+      "--level",
+      "L1",
+      "--scenes",
+      "1",
+      "--close-trials",
+      "1",
+      "--open-trials",
+      "1",
+      "--seed",
+      "11"
+    ],
+    "summary": "runs/20261105T100727Z_recovery/summary.json",
+    "episodes": [
+      {
+        "gripper_init": "close",
+        "steps": 81,
+        "native_goal_before": false,
+        "native_goal_after": true,
+        "environment_done": true
+      },
+      {
+        "gripper_init": "open",
+        "steps": 107,
+        "native_goal_before": false,
+        "native_goal_after": true,
+        "environment_done": true
+      }
+    ],
+    "owned_server_stopped": true,
+    "gpu_lock_released": true,
+    "scope": "Independent compact acceptance only; not full benchmark score",
+    "source_hashes": "deployment/adapter-hashes.json"
+  },
+  "retained_process_failures": [
+    {
+      "run_id": "20261105T094843Z_acceptance_policy",
+      "reason": "Websocket keepalive timeout during first JAX compile; zero actions"
+    },
+    {
+      "run_id": "20261105T095735Z_acceptance",
+      "observed_process_exit_code": 2,
+      "reason": "Launcher edited during active execution; all5 episodes saved successfully before trailing EOF; superseded by stable independent exit0 rerun"
+    }
+  ]
+}

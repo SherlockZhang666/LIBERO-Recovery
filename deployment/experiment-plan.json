@@ -1,0 +1,8 @@
+{
+ "scope": "Smoke deployment acceptance, not full benchmark ranking",
+ "policy_backend": "Official public openpi pi05_libero; learned policy continuation baseline",
+ "policy_baseline": {"suite":"libero_goal","task":"open_the_middle_drawer_of_the_cabinet","trials":1,"seed":7,"max_steps":520},
+ "initial_recovery_subset": {"suite":"libero_goal","task":"open_the_middle_drawer_of_the_cabinet","level":"L1","scenes":2,"scene_ids":["libero_goal__open_the_middle_drawer_of_the_cabinet__episode_019__step0080","libero_goal__open_the_middle_drawer_of_the_cabinet__episode_020__step0080"],"close_trials":1,"open_trials":1,"seed":7,"noise_xy_m":0.02,"gripper_settle_steps":20,"max_steps":520},
+ "provenance_requirement": "Native goal must be false after failure reconstruction and after gripper settling; subsequent goal true must arise from learned action stepping only.",
+ "scope_limits": "4 recovery rollouts are acceptance only, default official benchmark uses5closed+5open per scene. All attempted episodes including failures retained. Any further scene/seed trials will be saved and reported."
+}
